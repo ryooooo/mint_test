@@ -13,7 +13,7 @@ function getAddress() {
 
 function mint() {
   var signer = provider.getSigner();
-  var abi = ["function mint(string) external"];
+  var abi = ["function buyPre(uint8 _amount) external payable onlyWhitelist walletLimit(_amount)"];
   var contract = new ethers.Contract(
   "0xdcD633C764068Cf385DD404F54De1e0Ff283B8fB",
   abi,
