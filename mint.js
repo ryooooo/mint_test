@@ -14,7 +14,7 @@ function getAddress() {
 function mint() {
   var signer = provider.getSigner();
   var amount = 1
-  var abi = ["function buyPre(uint) external payable onlyWhitelist walletLimit(uint)"]
+  var abi = ["function buyPre(uint) external"]
   var contract = new ethers.Contract(
   "0xdcD633C764068Cf385DD404F54De1e0Ff283B8fB",
   abi,
