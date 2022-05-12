@@ -15,13 +15,13 @@ function mint() {
   var signer = provider.getSigner();
   var abi = ["function mint(string) external"];
   var contract = new ethers.Contract(
-  "0x8610882487d67d497ADAf2148a651CC49163C9E2",
+  "0xdcD633C764068Cf385DD404F54De1e0Ff283B8fB",
   abi,
   signer
   );
   contract
-  .mint(
-  "https://ethereum.org/static/a110735dade3f354a46fc2446cd52476/f3a29/eth-home-icon.webp"
+  .buyPre(
+  1
   )
   .then(function (r) {
     document.querySelector("#tx").innerText = "tx: " + r.hash;
